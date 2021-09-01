@@ -1,6 +1,7 @@
 # CERN-beamline-design
 
-A program to design a beamline and to simulate beam motion.
+A program to design a beamline and to simulate beam motion. 
+The beamline is a part of the MC40 Cyclotron Facility at the university of Birmingham.
 
 SimulationMadx is a Jupyter file. It uses 3 files with structures.
 Files with structures:
