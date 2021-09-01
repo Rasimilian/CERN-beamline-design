@@ -1,0 +1,50 @@
+! Beamline for MC40 Cyclotron
+! 14/07/2021
+!*******************************************************************************
+! Elements
+
+! Drifts
+O1 : DRIFT, L = 3;
+
+! Dipoles
+B1 : SBEND, L = 0.5, ANGLE = 0.52333, TILT = 0; //30 degrees
+B2 : SBEND, L = 0.5, ANGLE = 1.04667, TILT = 0; //60 degrees
+
+! Drifts
+O2 : DRIFT, L = 0.1;
+O3 : DRIFT, L = 0.1;
+O4 : DRIFT, L = 0.3;
+O5 : DRIFT, L = 0.7;
+O6 : DRIFT, L = 0.2;
+O7 : DRIFT, L = 0.2;
+
+! Quadrupoles
+Q1 : QUADRUPOLE, L = 0.3, K1 =  5.37108e+000;
+Q2 : QUADRUPOLE, L = 0.3, K1 = -4.73217e+000;
+Q3 : QUADRUPOLE, L = 0.3, K1 = -6.15446e-001;
+Q4 : QUADRUPOLE, L = 0.3, K1 =  2.42360e+000;
+
+! Markers
+M1 : MARKER;
+M2 : MARKER;
+M3 : MARKER;
+M4 : MARKER;
+M5 : MARKER;
+M6 : MARKER;
+M7 : MARKER;
+M8 : MARKER;
+M9 : MARKER;
+M10 : MARKER;
+M11 : MARKER;
+M12 : MARKER;
+
+!*******************************************************************************
+
+! Lines with 2 quads doublets
+! LINE1 with markers for tracking 
+! LINE without markers for matching
+
+LINE1 : LINE=(O1, M1, Q1, M2, O2, M3, Q2, M4, O3, M5, B1, M6, O4, M7, B2, M8, O5, M9, Q3, M10, O6, M11, Q4, M12, O7);
+LINE : LINE=(O1, Q1, O2, Q2, O3, B1, O4, B2, O5, Q3, O6, Q4, O7);
+
+RETURN;
